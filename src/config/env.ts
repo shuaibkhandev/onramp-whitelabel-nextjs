@@ -1,0 +1,12 @@
+export const env = {
+  ONRAMP_API_KEY: process.env.ONRAMP_API_KEY!,
+  ONRAMP_SECRET_KEY: process.env.ONRAMP_SECRET_KEY!,
+  ONRAMP_BASE_URL: process.env.ONRAMP_BASE_URL!,
+  ONRAMP_WEBHOOK_SECRET: process.env.ONRAMP_WEBHOOK_SECRET!,
+  BASIC_AUTH_USERNAME: process.env.BASIC_AUTH_USERNAME!,
+  BASIC_AUTH_PASSWORD: process.env.BASIC_AUTH_PASSWORD!,
+};
+
+if (!env.ONRAMP_API_KEY) {
+  throw new Error("Missing ONRAMP_API_KEY");
+}
